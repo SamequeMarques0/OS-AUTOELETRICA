@@ -1,0 +1,71 @@
+#principal{ z-index: 999;}
+#labelNome{ width: 160px; margin: 0 8px;}
+#labelContato{margin: 0 10px; width: 120px;}
+#labelCPFCNPJ{margin: 0 8px; width: 160px;}
+#labelModelo{margin: 0 10px; width: 220px;}
+#labelPlaca{margin: 0 10px; width: 100px;}
+#labelCor{margin: 0 10px; width: 100px;}
+#dateInicial,
+#dateFinal,
+#endGanrantia{width: 115px;z-index: 999;}
+
+input[type="date"]::-webkit-calendar-picker-indicator { display: block; opacity: 0; cursor: pointer;}
+#tools{
+    position: absolute; top: 50%; left: 50px;
+    width: 200px;
+    display: block; z-index: 1;
+}
+#tools button{
+    margin: 10px;
+    width: 35px; height: 35px;
+    border-radius: 50%; border: none;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.btnToggle i,
+.btnPrint i { font-size: 20px;}
+
+#toolsContent{
+    display: none; align-items: center; justify-content: center; flex-direction: column;
+    position: relative;
+    width: 180px;
+    background: white;
+    border-radius: 5px;
+    margin: 15px 0;
+    transition: 5s ease-in-out;
+}
+#toolsContent input{width: 100%; text-align: center;}
+#toolsContent .groupAddRemove{display: flex;}
+.groupAddRemove .addBtnTools,
+.groupAddRemove .removeBtnTools
+{
+    width: 90px; height: 20px;
+    border: none;
+    opacity: .8;
+    transition: .8s ease-in-out;
+    display: flex; align-items: center; justify-content: center;
+}
+.addBtnTools{background: rgb(49, 150, 49);}
+.removeBtnTools{ background: rgb(139, 24, 24);}
+
+.groupAddRemove .addBtnTools i,
+.groupAddRemove .removeBtnTools i{ color: white;}
+.groupAddRemove .addBtnTools:hover,
+.groupAddRemove .removeBtnTools:hover{ opacity: 1;}
+
+.btnToggle,
+.btnPrint,
+.btnSetDateGan,
+.btnPlacaCar{ position: relative; }
+
+.btnToggle:hover::after{content: 'Product and Service';position: absolute; top: 8px; left: 50px; width: 80px; padding: 2px 4px; border-radius: 5px;
+    background-color: black;color: white;transition: 2s ease-in-out;}
+.btnPrint:hover::after{
+    content: 'Print';position: absolute; top: 8px; left: 50px;width: 50px; padding: 2px 4px; border-radius: 5px;
+    background-color: black;color: white;transition: 2s ease-in-out;}
+.btnSetDateGan:hover::after{
+    content: 'Setting Dates'; position: absolute; top: 8px; left: 50px; width: 50px; padding: 2px 4px; border-radius: 5px;
+    background-color: black;color: white;transition: 2s ease-in-out;}
+.btnPlacaCar:hover::after{
+    content: 'Placa';position: absolute; top: 8px; left: 50px;width: 50px; padding: 2px 4px; border-radius: 5px;
+    background-color: black;color: white;transition: 2s ease-in-out;}
