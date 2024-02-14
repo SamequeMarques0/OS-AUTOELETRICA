@@ -123,7 +123,7 @@ var addBtnTools = document.querySelector('.addBtnTools');
           var subtotal = parseFloat(tbody.rows[i].cells[3].textContent.replace("R$ ", "").replace(".", "").replace(",", "."));
           total += isNaN(subtotal) ? 0 : subtotal;
         }
-        document.getElementById("total2").textContent = "R$ " + total.toFixed(2).replace(".", ",");
+        document.getElementById("total2").textContent =  `R$ ${total.toFixed(2).replace('.',',')};`;
       }
 
 
